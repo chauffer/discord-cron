@@ -2,8 +2,7 @@
 
 A stupid bot that sends a message to said channel each X seconds.
 
-It currently takes intervals, not proper crontab syntax,
-crontab support is planned, but unscheduled.
+Supports crontab syntax.
 
 ## Configuration
 The only supported way to run this is through Docker, it'll work otherwise,
@@ -22,7 +21,7 @@ or:
 - `DISCORD_CRON_CRONTAB` - Multiline parameter to schedule messages (interval, channel id, message)
   e.g.: 
   ```
-  30, 31105814815614901265, :thinking:
-  600, 31105814815614901265, hola!
+  * * * * *, 31105814815614901265, :thinking:
+  0 3 * * *, 31105814815614901265, hola!
   ```
 
