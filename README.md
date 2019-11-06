@@ -4,6 +4,11 @@ A stupid bot that sends a message to said channel each X seconds.
 
 Supports crontab syntax.
 
+## Running
+```
+docker run -d --restart=always -e DISCORD_CRON_TOKEN="token" -e DISCORD_CRON_CRONTAB="* * * * *, channelid, message" chauffer/discord-cron
+```
+
 ## Configuration
 The only supported way to run this is through Docker, it'll work otherwise,
 but you are on your own as to how to do this.
